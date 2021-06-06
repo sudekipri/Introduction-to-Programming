@@ -1,2 +1,2 @@
 # CS-201
-mini projects programmed with C++
+Introduction to Programming - Mini Projects Programmed with C++
