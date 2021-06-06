@@ -1,0 +1,315 @@
+//Sude Buket Kipri 
+#include <iostream>
+#include <string>
+using namespace std;
+
+bool ifYes(string username, string coursename) { //if the user takes the course for the first time
+	string prevGrade, currentGrade, lastGrade; //previous, current and the final grade of the student
+	string yesNo;
+	cout << "What is your grade from (A,B,C,D,F)? ";
+	cin >> currentGrade;
+	if (currentGrade == "D") {
+		cout << "Do you want to switch your grade from " << currentGrade << " to S (YES or NO)? ";
+		cin >> yesNo;
+		string yes = "YES";
+		string no = "NO";
+		if (yesNo == yes) {
+			cout << username << ", your final grade for " << coursename << " is S. Goodbye..." << endl;
+		}
+		else if (yesNo == no) {
+			cout << username << ", your final grade for " << coursename << " is " << currentGrade << ". Goodbye..." << endl;
+		}
+		
+	}
+	else if (currentGrade == "A") {
+		cout << "Do you want to switch your grade from " << currentGrade << " to S (YES or NO)? ";
+		cin >> yesNo;
+		string yes = "YES";
+		string no = "NO";
+		if (yesNo == yes) {
+			cout << username << ", your final grade for " << coursename << " is S. Goodbye..." << endl;
+		}
+		else if (yesNo == no) {
+			cout << username << ", your final grade for " << coursename << " is " << currentGrade << ". Goodbye..." << endl;
+		}
+		else {
+			cout << "Invalid grade selection. Goodbye..." << endl;
+		}
+	}
+	else if (currentGrade == "B") {
+		cout << "Do you want to switch your grade from " << currentGrade << " to S (YES or NO)? ";
+		cin >> yesNo;
+		string yes = "YES";
+		string no = "NO";
+		if (yesNo == yes) {
+			cout << username << ", your final grade for " << coursename << " is S. Goodbye..." << endl;
+		}
+		else if (yesNo == no) {
+			cout << username << ", your final grade for " << coursename << " is " << currentGrade << ". Goodbye..." << endl;
+		}	
+		else {
+			cout << "Invalid grade selection. Goodbye..." << endl;
+		}
+	}
+
+	else if (currentGrade == "C") {
+		cout << "Do you want to switch your grade from " << currentGrade << " to S (YES or NO)? ";
+		cin >> yesNo;
+		string yes = "YES";
+		string no = "NO";
+		if (yesNo == yes) {
+			cout << username << ", your final grade for " << coursename << " is S. Goodbye..." << endl;
+		}
+		else if (yesNo == no) {
+			cout << username << ", your final grade for " << coursename << " is " << currentGrade << ". Goodbye..." << endl;
+		}
+		else {
+			cout << "Invalid grade selection. Goodbye..." << endl;
+		}
+		
+	}
+	else if (currentGrade == "F") {
+		cout << "Do you want to switch your grade from F to U (YES or NO)? ";
+		cin >> yesNo;
+		cout << username << ", your final grade for " << coursename << " is U. Goodbye..." << endl;
+	}
+
+	else {
+		cout << "Invalid grade selection. Goodbye..." << endl;
+	}
+	return true;
+}
+
+bool ifNo(string username, string coursename) {
+	string prevGrade, currentGrade, lastGrade; //previous, current and the final grade of the student
+	cout << "Please enter your previous grade from (A,B,C,D,F,S,U): ";
+	cin >> prevGrade;
+	cout << "Please enter your current grade from (A,B,C,D,F): ";
+	cin >> currentGrade;
+	if (currentGrade == "A" || currentGrade == "B" || currentGrade == "C" || currentGrade == "D" || currentGrade == "F") {
+		cout << "Please enter the grade you want to choose from (A,B,C,D,F,S,U): ";
+		cin >> lastGrade;
+
+
+		if (prevGrade == "A" || prevGrade == "B" || prevGrade == "C" || prevGrade == "D") {
+			if (currentGrade == "A") {
+				if (lastGrade == "S") {
+					cout << username << ", your final grade for " << coursename << " is S. Goodbye..." << endl;
+				}
+				else if (lastGrade == "A") {
+					cout << username << ", your final grade for " << coursename << " is A. Goodbye..." << endl;
+				}
+				else if (lastGrade == "B") {
+					cout << "Invalid grade selection. You cannot choose a higher or lower grade than you deserve." << endl;
+				}
+				else if (lastGrade == "C") {
+					cout << "Invalid grade selection. You cannot choose a higher or lower grade than you deserve." << endl;
+				}
+				else if (lastGrade == "D") {
+					cout << "Invalid grade selection. You cannot choose a higher or lower grade than you deserve." << endl;
+				}
+				else if (lastGrade == "U") {
+					cout << "Invalid grade selection. You cannot choose a higher or lower grade than you deserve." << endl;
+				}
+            }
+
+			else if (currentGrade == "B") {
+				if (lastGrade == "S") {
+					cout << username << ", your final grade for " << coursename << " is S. Goodbye..." << endl;
+				}
+				else if (lastGrade == "B") {
+					cout << username << ", your final grade for " << coursename << " is B. Goodbye..." << endl;
+				}
+				else if (lastGrade == "A") {
+					cout << "Invalid grade selection. You cannot choose a higher or lower grade than you deserve." << endl;
+				}
+				else if (lastGrade == "C") {
+					cout << "Invalid grade selection. You cannot choose a higher or lower grade than you deserve." << endl;
+				}
+				else if (lastGrade == "D") {
+					cout << "Invalid grade selection. You cannot choose a higher or lower grade than you deserve." << endl;
+				}
+				else if (lastGrade == "U") {
+					cout << "Invalid grade selection. You cannot choose a higher or lower grade than you deserve." << endl;
+				}
+			}
+			else if (currentGrade == "C") {
+				if (lastGrade == "S") {
+					cout << username << ", your final grade for " << coursename << " is S. Goodbye..." << endl;
+				}
+				else if (lastGrade == "C") {
+					cout << username << ", your final grade for " << coursename << " is C. Goodbye..." << endl;
+				}
+				else if (lastGrade == "B") {
+					cout << "Invalid grade selection. You cannot choose a higher or lower grade than you deserve." << endl;
+				}
+				else if (lastGrade == "A") {
+					cout << "Invalid grade selection. You cannot choose a higher or lower grade than you deserve." << endl;
+				}
+				else if (lastGrade == "D") {
+					cout << "Invalid grade selection. You cannot choose a higher or lower grade than you deserve." << endl;
+				}
+				else if (lastGrade == "U") {
+					cout << "Invalid grade selection. You cannot choose a higher or lower grade than you deserve." << endl;
+				}
+			}
+			else if (currentGrade == "D") {
+				if (lastGrade == "S") {
+					cout << username << ", your final grade for " << coursename << " is S. Goodbye..." << endl;
+				}
+				else if (lastGrade == "D") {
+					cout << username << ", your final grade for " << coursename << " is D. Goodbye..." << endl;
+				}
+				else if (lastGrade == "B") {
+					cout << "Invalid grade selection. You cannot choose a higher or lower grade than you deserve." << endl;
+				}
+				else if (lastGrade == "C") {
+					cout << "Invalid grade selection. You cannot choose a higher or lower grade than you deserve." << endl;
+				}
+				else if (lastGrade == "A") {
+					cout << "Invalid grade selection. You cannot choose a higher or lower grade than you deserve." << endl;
+				}
+				else if (lastGrade == "U") {
+					cout << "Invalid grade selection. You cannot choose a higher or lower grade than you deserve." << endl;
+				}
+			}
+			}
+		else if (prevGrade == "F") {
+			if (currentGrade == "F") {
+				if (lastGrade == "U") {
+					cout << "Invalid grade selection. If you received F before, and fail this semester, you get F." << endl;
+				}
+				else if (lastGrade == "F") {
+					cout << username << ", your final grade for " << coursename << " is "<<lastGrade<<". Goodbye..." << endl;
+				}
+			}
+			else if (currentGrade == "A" || currentGrade == "B" || currentGrade == "C" || currentGrade == "D") {
+				if (lastGrade == "A" || lastGrade == "B" || lastGrade == "C" || lastGrade == "D") {
+					cout << username << ", your final grade for " << coursename << " is " << lastGrade << ". Goodbye..." << endl;
+				}
+				if (lastGrade == "U") {
+					cout << username << ", your final grade for " << coursename << " is " << lastGrade << ". Goodbye..." << endl;
+				}
+			}
+			else if (currentGrade == "D") {
+				if (lastGrade == "A" || lastGrade == "B" || lastGrade == "C" || lastGrade == "D") {
+					cout << username << ", your final grade for " << coursename << " is " << lastGrade << ". Goodbye..." << endl;
+				}
+				if (lastGrade == "U") {
+					cout << username << ", your final grade for " << coursename << " is " << lastGrade << ". Goodbye..." << endl;
+				}
+			}
+		}
+
+	else if (prevGrade == "U") {
+		if (currentGrade == "F") {
+			if (lastGrade == "U") {
+				cout << username << ", your final grade for " << coursename << " is U. Goodbye..." << endl;
+			}
+			else if (lastGrade == "F") {
+				cout << username << ", your final grade for " << coursename << " is F. Goodbye..." << endl;
+			}
+			else {
+				cout << "Invalid grade selection. Goodbye..." << endl;
+			}
+		}
+		else if (currentGrade == "A") {
+			if (lastGrade == "S") {
+				cout << username << ", your final grade for " << coursename << " is S. Goodbye..." << endl;
+			}
+			else if (lastGrade == "F") {
+				cout << "Invalid grade selection. If you received U before, you may choose S or current letter grade." << endl;
+			}
+		}
+		else if (currentGrade == "B") {
+			if (lastGrade == "S") {
+				cout << username << ", your final grade for " << coursename << " is S. Goodbye..." << endl;
+			}
+			else if (lastGrade == "F") {
+				cout << "Invalid grade selection. If you received U before, you may choose S or current letter grade." << endl;
+			}
+		}
+		else if (currentGrade == "C") {
+			if (lastGrade == "S") {
+				cout << username << ", your final grade for " << coursename << " is S. Goodbye..." << endl;
+			}
+			else if (lastGrade == "F") {
+				cout << "Invalid grade selection. If you received U before, you may choose S or current letter grade." << endl;
+			}
+		}
+		else if (currentGrade == "D") {
+			if (lastGrade == "S") {
+				cout << username << ", your final grade for " << coursename << " is S. Goodbye..." << endl;
+			}
+			else if (lastGrade == "F") {
+				cout << "Invalid grade selection. If you received U before, you may choose S or current letter grade." << endl;
+			}
+		}
+		
+	}
+		
+
+		else if (prevGrade == "S") {
+		if (currentGrade == "F") {
+			if (lastGrade == "U") {
+				cout << "Invalid grade selection. If you received S before and fail this semester, you get F." << endl;
+			}
+			else if (lastGrade == "A") {
+				cout << "Invalid grade selection. If you received S before and fail this semester, you get F." << endl;
+			}
+			else if (lastGrade == "B") {
+				cout << "Invalid grade selection. If you received S before and fail this semester, you get F." << endl;
+			}
+			else if (lastGrade == "C") {
+				cout << "Invalid grade selection. If you received S before and fail this semester, you get F." << endl;
+			}
+			else if (lastGrade == "D") {
+				cout << "Invalid grade selection. If you received S before and fail this semester, you get F." << endl;
+			}
+		
+		}
+		else if (currentGrade == "A" || currentGrade == "B" || currentGrade == "C" || currentGrade == "D") {
+			if (lastGrade == "A" || lastGrade == "B" || lastGrade == "C" || lastGrade == "D"||lastGrade=="S") {
+				cout << username << ", your final grade for " << coursename << " is " << lastGrade << ". Goodbye..." << endl;
+			}	
+		}
+		}
+
+	}
+
+	else if (currentGrade == "G") {
+		cout << "Invalid grade selection. Goodbye..." << endl;
+	}
+	else {
+		cout << "Invalid grade selection. Goodbye..." << endl;
+	}
+	
+	return true;
+}
+
+
+
+int main() {
+	string username, coursename; //getting user name and course name from the student
+	cout << "Welcome to the Fall 2020-2021 Semester grading system. What is your name? ";
+	cin >> username;
+	cout << "Hello " << username << "! Please enter the name of the course to be processed: ";
+	cin >> coursename;
+	cout << "Hello " << username << "! If you take the " << coursename << " for the first time, enter YES otherwise NO: ";
+	string first = "YES";
+	string repeated = "NO";
+	string response;
+	cin >> response;
+	
+	if (response == first) {
+		//calling ifYes function
+		if (ifYes(username, coursename)) {
+		}
+	}
+	else if (response == repeated) {
+		//calling ifNo function 
+		if (ifNo(username, coursename)) {
+		}
+	}
+	return 0;
+}
